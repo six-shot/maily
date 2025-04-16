@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  background: white;
+}
+.hero-bg {
+  align-items: center;
+  background: radial-gradient(
+    62.41569446875758% 80.11014942970601% at 52.548115021246446%
+      31.507288140638245%,
+    #1d7fff 5.539991334080696%,
+    rgba(142, 208, 242, 1) 78.50944399833679%
+  );
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  overflow: hidden;
+  padding-bottom: 192px;
+  position: relative;
+  width: 100%;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes shine {
+  0% {
+    left: 120%;
+  }
+  50% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
   }
 }
+.shine-effect {
+  animation: shine 3s infinite linear;
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.second-bg {
+  border-radius: 171.75px;
+  background: linear-gradient(179deg, #e8f0ff 0%, #a6c7ff 100%);
+  box-shadow: 0px 4.817px 9.633px 0px rgba(0, 0, 0, 0.1),
+    0px 19.267px 19.267px 0px rgba(0, 0, 0, 0.09),
+    0px 38.534px 24.084px 0px rgba(0, 0, 0, 0.05),
+    0px 72.251px 28.9px 0px rgba(0, 0, 0, 0.02);
+}
+.third-bg {
+  border-radius: 171.75px;
+  background: #d7d7d9;
+  box-shadow: 0px 0.828px 1.656px 0px rgba(0, 0, 0, 0.1),
+    0px 3.312px 3.312px 0px rgba(0, 0, 0, 0.09),
+    0px 6.625px 4.141px 0px rgba(0, 0, 0, 0.05),
+    0px 12.422px 4.969px 0px rgba(0, 0, 0, 0.02);
+}
+.first-bg {
+  border-radius: 171.75px;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0px 4.817px 9.633px 0px rgba(0, 0, 0, 0.1),
+    0px 19.267px 19.267px 0px rgba(0, 0, 0, 0.09),
+    0px 38.534px 24.084px 0px rgba(0, 0, 0, 0.05),
+    0px 72.251px 28.9px 0px rgba(0, 0, 0, 0.02);
+}
+.get-started-btn{
+  border-radius: 20px;
+background: linear-gradient(189deg, #3C3C3C 0%, #232323 100%);
+box-shadow: 0px 4.68px 14.508px 0px rgba(255, 255, 255, 0.50) inset, 0px 2.618px 0px 0px #000;
+}
+
+.explore-btn{
+  border-radius: 20px;
+background: #FFF;
+box-shadow: 0px 7px 11px 0px rgba(0, 0, 0, 0.05);
 }

@@ -1,0 +1,42 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#clip0)">
+    <rect width="48" height="48" rx="15" fill="#000" />
+    <mask id="mask0" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48">
+      <path fill="#fff" d="M0 0h48v48H0z" />
+    </mask>
+    <g mask="url(#mask0)">
+      <path
+        d="M5.742 58.938 2.003 47.126a10.11 10.11 0 0 1 2.959-10.638v0a10.11 10.11 0 0 0 2.664-11.446l-2.12-5.133a17.9 17.9 0 0 1-.95-10.601L7.21-2.982m7.665-15.309 10.517 5.528c3.486 1.832 5.553 5.699 5.22 9.763v0c-.36 4.386 2.072 8.5 5.985 10.123l4.829 2.004c3.251 1.349 6.01 3.742 7.877 6.834l6.414 10.618"
+        stroke="#DDD" stroke-width="0.616" stroke-linecap="round" stroke-linejoin="round"
+      />
+      <path
+        d="m-16.122 12.069 10.517 5.527c3.486 1.832 5.553 5.7 5.22 9.764v0c-.36 4.385 2.072 8.5 5.985 10.123l4.829 2.003c3.251 1.35 6.01 3.742 7.877 6.834l6.414 10.62M11.679-1.736q0 0 0 0c0 .001 3.925 18.264 11.688 26.019 3.486 3.483 9.177 6.275 13.713 8.118 4.44 1.803 8.417 4.817 10.96 9.027l5.335 8.833"
+        stroke="#DDD" stroke-width="0.616" stroke-linecap="round" stroke-linejoin="round"
+      />
+      <g filter="url(#filter0)">
+        <path
+          d="M34.43-24.535 30.927-6.918 21.244 3.916 7.057 6.573 1.93 21.823-8.476 32.17l-10.7.842-4.528-29.136.756-9.102 29.65-15.411z"
+          fill="#CBE6F6"
+        />
+      </g>
+      <g filter="url(#filter1)">
+        <path
+          d="m23.166 56.6-2.71-6.146 7.666-8.537 11.208-2.07 4.077-12.033 8.236-8.151 8.452-.644 3.523 23.018-.614 7.186-23.442 12.113z"
+          fill="#D0F6EA"
+        />
+      </g>
+      <rect
+        x="2.341" y="2.342" width="43.317" height="43.317" rx="13.638"
+        stroke="#fff" stroke-opacity="0.17" stroke-width="1.277"
+        style="mix-blend-mode:plus-lighter"
+      />
+    </g>
+  </g>
+  <defs>
+    <clipPath id="clip0">
+      <rect width="48" height="48" rx="15" />
+    </clipPath>
+    <filter id="filter0" x="-56.618" y="-57.449" width="123.962" height="123.375" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"/>
+    <filter id="filter1" x="-6.956" y="-8.392" width="97.984" height="97.139" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"/>
+  </defs>
+</svg>
