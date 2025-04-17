@@ -142,7 +142,7 @@ export default function Home() {
                 Never miss an{" "}
                 <span className="text-black">important message</span>. Get
                 notified instantly, ensuring{" "}
-                <span className="text-black">you're always in the loop</span>{" "}
+                <span className="text-black">you &apos; re always in the loop</span>{" "}
                 and ready.
               </p>
             </div>
