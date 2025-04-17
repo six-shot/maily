@@ -372,11 +372,11 @@ export default function Home() {
             </h3>
             <div className="absolute left-[50%] translate-x-[-50%] w-screen  mt-[67px] font-[family-name:var(--font-inter)] overflow-hidden">
               <Marquee className="" direction="left" speed={40}>
-                <div className="flex flex-wrap gap-6">
+                <div className="flex flex-wrap ">
                   {testimonials.map((testimonial, idx) => (
                     <div
                       key={idx}
-                      className="w-[580px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px]"
+                      className="w-[580px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px] mx-3"
                     >
                       <p className="text-[17px] text-black/70 leading-[27px]">
                         {testimonial.text}
@@ -411,11 +411,11 @@ export default function Home() {
                 </div>
               </Marquee>
               <Marquee className="mt-[38px]" direction="right" speed={40} >
-                <div className="flex flex-wrap gap-6">
+                <div className="flex flex-wrap">
                   {testimonials.map((testimonial, idx) => (
                     <div
                       key={idx}
-                      className="w-[580px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px]"
+                      className="w-[580px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px] mx-3"
                     >
                       <p className="text-[17px] text-black/70 leading-[27px]">
                         {testimonial.text}
