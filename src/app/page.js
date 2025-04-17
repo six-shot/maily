@@ -10,6 +10,7 @@ import blur from "../../public/Blur.png";
 import right from "../../public/right.svg";
 import left from "../../public/left.svg";
 import mail1 from "../../public/mail1.avif";
+import organize from "../../public/organize.png";
 
 export default function Home() {
   return (
@@ -141,7 +142,7 @@ export default function Home() {
                 Never miss an{" "}
                 <span className="text-black">important message</span>. Get
                 notified instantly, ensuring{" "}
-                <span className="text-black">you’re always in the loop</span>{" "}
+                <span className="text-black">you're always in the loop</span>{" "}
                 and ready.
               </p>
             </div>
@@ -186,6 +187,83 @@ export default function Home() {
             <button className="flex items-center gap-[17px] work-btn px-[38px] h-[102px] text-[36px] font-extrabold text-[rgba(255,255,255,0.87)] rotate-[6deg]">
               💼 Work
             </button>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 gap-[48px] items-center mt-[90px] font-[family-name:var(--font-inter)] py-[56px]">
+          <div>
+            <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] ">
+              Organize all the
+              <br /> things you do.
+            </h3>
+            <div className="mt-[50px] grid grid-cols-3 gap-4 items-center">
+              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+                Custom Inboxes
+              </button>
+              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+                Read Checker
+              </button>
+              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+                Scheduling
+              </button>
+              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+                Book Meetings
+              </button>
+              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+                Team Support
+              </button>
+              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+                AI Writer
+              </button>
+            </div>
+            <div className="flex items-center gap-4 mt-4">
+              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+                Advanced Spam Detection
+              </button>
+              <button className="h-[63px] px-[36px] col-span-2 flex justify-start items-center  rounded-[100px] text-black/50 text-[18px]">
+                And so much more...
+              </button>
+            </div>
+          </div>
+          <div className="w-[692px] h-[500px] border border-[rgba(255,255,255,0.24)] rounded-[46px] relative overflow-hidden">
+            <Image
+              className="w-full h-full object-cover rounded-[46px]"
+              src={organize}
+              alt="organize"
+            />
+            <div className="absolute top-0 left-0 w-full h-[234px] pl-[46px] pt-[45px]">
+              <div className="h-[234px] work w-full pl-[48px] flex gap-[48px] items-center  rounded-l-[72px]">
+                <Image
+                  src={bg2}
+                  className="w-[150px] h-[150px] rounded-full border border-[#FBFBF8] google-bg"
+                  alt="bg2"
+                />
+                <div className="max-w-[700px] overflow-hidden">
+                  <h5 className="text-[38px] text-[rgba(0,0,0,0.83)] font-bold leading-[46px] mb-3">
+                    Google Inc.
+                  </h5>
+                  <p className="whitespace-nowrap text-[20px] text-[rgba(0,0,0,0.83)] opacity-[0.3]">
+                    New user has been added to your workspace. You can now
+                    collaborate seamlessly <br /> within your Google Workspace
+                    account.
+                  </p>
+                </div>
+              </div>
+              <div className="h-[234px] work w-full  rounded-l-[72px] pl-[48px] flex gap-[48px] items-center mt-[21px]">
+                <Image
+                  src={bg2}
+                  className="w-[150px] h-[150px] rounded-full border border-[#FBFBF8] google-bg"
+                  alt="bg2"
+                />
+                <div className="max-w-[700px] overflow-hidden">
+                  <h5 className="text-[38px] text-[rgba(0,0,0,0.83)] font-bold leading-[46px] mb-3">
+                  Slack
+                  </h5>
+                  <p className="whitespace-nowrap text-[20px] text-[rgba(0,0,0,0.83)] opacity-[0.3]">
+                    You have been mentioned
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
