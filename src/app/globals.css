@@ -63,14 +63,53 @@ body {
     0px 38.534px 24.084px 0px rgba(0, 0, 0, 0.05),
     0px 72.251px 28.9px 0px rgba(0, 0, 0, 0.02);
 }
-.get-started-btn{
+.get-started-btn {
   border-radius: 20px;
-background: linear-gradient(189deg, #3C3C3C 0%, #232323 100%);
-box-shadow: 0px 4.68px 14.508px 0px rgba(255, 255, 255, 0.50) inset, 0px 2.618px 0px 0px #000;
+  background: linear-gradient(189deg, #3c3c3c 0%, #232323 100%);
+  box-shadow: 0px 4.68px 14.508px 0px rgba(255, 255, 255, 0.5) inset,
+    0px 2.618px 0px 0px #000;
 }
 
-.explore-btn{
+.explore-btn {
   border-radius: 20px;
-background: #FFF;
-box-shadow: 0px 7px 11px 0px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  box-shadow: 0px 7px 11px 0px rgba(0, 0, 0, 0.05);
+}
+
+.card-bg {
+  border-radius: 44px 44px 0px 0px;
+  background: linear-gradient(180deg, #1e80ff 0%, #8fd1f3 100%);
+}
+
+.category-bg {
+  border-radius: 48px;
+  background: radial-gradient(
+    87.68% 87.68% at 50% 50%,
+    #f8f8f8 0%,
+    #ebebeb 100%
+  );
+}
+.design-btn {
+  border-radius: 80px;
+  background: #53fd18;
+  box-shadow: 0px 3px 14px 2px #cf0 inset,
+    -9px 16px 30px 0px rgba(24, 216, 62, 0.31);
+}
+.family-btn {
+  border-radius: 90px;
+  background: #fdbc18;
+  box-shadow: 0px -4px 21px 3px #f9ff00 inset,
+    2px 20px 30px 0px rgba(240, 176, 0, 0.31);
+}
+.it-team-btn {
+  border-radius: 100px;
+  background: #fd6a18;
+  box-shadow: 0px -4px 20px 0px #ffc600 inset,
+    -13px 20px 30px 0px rgba(245, 107, 25, 0.31);
+}
+.work-btn {
+  border-radius: 120px;
+  background: #186afd;
+  box-shadow: 0px -5px 35px 3px #00ffe0 inset,
+    0px 15px 30px 0px rgba(10, 177, 239, 0.31);
 }
