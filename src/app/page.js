@@ -11,7 +11,7 @@ import right from "../../public/right.svg";
 import left from "../../public/left.svg";
 import mail1 from "../../public/mail1.avif";
 import organize from "../../public/organize.png";
-
+import testimonial from "../../public/testimonial.avif";
 export default function Home() {
   return (
     <div>
@@ -142,7 +142,9 @@ export default function Home() {
                 Never miss an{" "}
                 <span className="text-black">important message</span>. Get
                 notified instantly, ensuring{" "}
-                <span className="text-black">you &apos; re always in the loop</span>{" "}
+                <span className="text-black">
+                  you &apos; re always in the loop
+                </span>{" "}
                 and ready.
               </p>
             </div>
@@ -196,7 +198,7 @@ export default function Home() {
               <br /> things you do.
             </h3>
             <div className="mt-[50px] grid grid-cols-3 gap-4 items-center">
-              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px] text-nowrap">
                 Custom Inboxes
               </button>
               <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
@@ -224,46 +226,72 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="w-[692px] h-[500px] border border-[rgba(255,255,255,0.24)] rounded-[46px] relative overflow-hidden">
+          <div className="w-[692px] h-[525px] border-[3px] border-[rgba(255,255,255,0.24)] rounded-[46px] relative overflow-hidden">
             <Image
               className="w-full h-full object-cover rounded-[46px]"
               src={organize}
               alt="organize"
             />
-            <div className="absolute top-0 left-0 w-full h-[234px] pl-[46px] pt-[45px]">
-              <div className="h-[234px] work w-full pl-[48px] flex gap-[48px] items-center  rounded-l-[72px]">
-                <Image
-                  src={bg2}
-                  className="w-[150px] h-[150px] rounded-full border border-[#FBFBF8] google-bg"
-                  alt="bg2"
-                />
-                <div className="max-w-[700px] overflow-hidden">
-                  <h5 className="text-[38px] text-[rgba(0,0,0,0.83)] font-bold leading-[46px] mb-3">
-                    Google Inc.
-                  </h5>
-                  <p className="whitespace-nowrap text-[20px] text-[rgba(0,0,0,0.83)] opacity-[0.3]">
-                    New user has been added to your workspace. You can now
-                    collaborate seamlessly <br /> within your Google Workspace
-                    account.
-                  </p>
+            <div className="absolute top-0 left-0 w-full h-[234px] pl-[46px] pt-[40px]">
+              <div className="pl-[59px] flex gap-[27px]">
+                <div className="px-8 pt-4  work-tab relative text-[26px] text-white leading-8 flex justify-center pb-[48px] animate-[firstTab_1.5s_ease-in-out_infinite]">
+                  Work
+                </div>
+                <div className="px-8 pt-4 it-team-tab relative text-[26px] text-white leading-8 flex justify-center pb-[64px] animate-[secondTab_1.5s_ease-in-out_infinite]">
+                  IT Team
                 </div>
               </div>
-              <div className="h-[234px] work w-full  rounded-l-[72px] pl-[48px] flex gap-[48px] items-center mt-[21px]">
-                <Image
-                  src={bg2}
-                  className="w-[150px] h-[150px] rounded-full border border-[#FBFBF8] google-bg"
-                  alt="bg2"
-                />
-                <div className="max-w-[700px] overflow-hidden">
-                  <h5 className="text-[38px] text-[rgba(0,0,0,0.83)] font-bold leading-[46px] mb-3">
-                  Slack
-                  </h5>
-                  <p className="whitespace-nowrap text-[20px] text-[rgba(0,0,0,0.83)] opacity-[0.3]">
-                    You have been mentioned
-                  </p>
+              <div className="-mt-[48px]">
+                <div className="h-[234px] work w-full pl-[48px] flex gap-[48px] items-center  rounded-l-[72px] relative z-10">
+                  <Image
+                    src={bg2}
+                    className="w-[150px] h-[150px] rounded-full border border-[#FBFBF8] google-bg"
+                    alt="bg2"
+                  />
+                  <div className="max-w-[700px] overflow-hidden">
+                    <h5 className="text-[38px] text-[rgba(0,0,0,0.83)] font-bold leading-[46px] mb-3">
+                      Google Inc.
+                    </h5>
+                    <h6 className="text-[22px] text-[rgba(0,0,0,0.83)] font-medium leading-[27px] opacity-[0.6] mb-[9px]">
+                      Add User to Workspace
+                    </h6>
+                    <p className="whitespace-nowrap text-[20px] text-[rgba(0,0,0,0.83)] opacity-[0.3]">
+                      New user has been added to your workspace. You can now
+                      collaborate seamlessly <br /> within your Google Workspace
+                      account.
+                    </p>
+                  </div>
+                </div>
+                <div className="h-[234px] work w-full  rounded-l-[72px] pl-[48px] flex gap-[48px] items-center mt-[21px]">
+                  <Image
+                    src={bg2}
+                    className="w-[150px] h-[150px] rounded-full border border-[#FBFBF8] google-bg"
+                    alt="bg2"
+                  />
+                  <div className="max-w-[700px] overflow-hidden">
+                    <h5 className="text-[38px] text-[rgba(0,0,0,0.83)] font-bold leading-[46px] mb-3">
+                      Slack
+                    </h5>
+                    <h6 className="text-[22px] text-[rgba(0,0,0,0.83)] font-medium leading-[27px] opacity-[0.6] mb-[9px]">
+                      You have Been Mentioned
+                    </h6>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="w-full h-[1010px] rounded-[48px] mt-[107px] mb-[146px] relative">
+          <Image
+            src={testimonial}
+            alt="testimonial"
+            className="w-full h-full object-cover rounded-[48px]"
+          />
+          <div className="absolute top-0 left-0 w-full h-full z-10 pt-[88px]">
+            <h3 className="text-white text-[80px] font-semibold leading-[80px] text-center font-[family-name:var(--font-inter)]">
+              Why <span className="text-white/50">people</span> <br /> love
+              Maily.
+            </h3>
           </div>
         </div>
       </div>

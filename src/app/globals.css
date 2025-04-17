@@ -113,12 +113,62 @@ body {
   box-shadow: 0px -5px 35px 3px #00ffe0 inset,
     0px 15px 30px 0px rgba(10, 177, 239, 0.31);
 }
-.work{
-
-background: linear-gradient(175deg, #FFF 0%, #C4E4FB 100%);
+.work {
+  background: linear-gradient(175deg, #fff 0%, #c4e4fb 100%);
 }
-.google-bg{
+.google-bg {
   border-radius: 312.19px;
-background: linear-gradient(179deg, #E8F0FF 0%, #A6C7FF 100%);
-box-shadow: 0px 4.817px 9.633px 0px rgba(0, 0, 0, 0.10), 0px 19.267px 19.267px 0px rgba(0, 0, 0, 0.09), 0px 38.534px 24.084px 0px rgba(0, 0, 0, 0.05), 0px 72.251px 28.9px 0px rgba(0, 0, 0, 0.02);
+  background: linear-gradient(179deg, #e8f0ff 0%, #a6c7ff 100%);
+  box-shadow: 0px 4.817px 9.633px 0px rgba(0, 0, 0, 0.1),
+    0px 19.267px 19.267px 0px rgba(0, 0, 0, 0.09),
+    0px 38.534px 24.084px 0px rgba(0, 0, 0, 0.05),
+    0px 72.251px 28.9px 0px rgba(0, 0, 0, 0.02);
+}
+.work-tab {
+  background-color: rgb(255, 76, 0);
+    border-radius: 24.936% / 28.6445%;
+    box-shadow: rgb(255, 214, 0) 0px 5.24643px 16.4388px 0px inset;
+    transform: translate3d(0px, 0.0601165px, 0px);
+    transform-origin: 50% 50% 0px;
+}
+.it-team-tab {
+  background-color: rgb(0, 10, 255);
+  border-radius: 19.5856% / 27.6543%;
+  box-shadow: rgb(0, 255, 255) 0px 5.24643px 16.4388px 0px inset;
+  transform: translate3d(0px, 0.0112389px, 0px);
+  transform-origin: 50% 50% 0px;
+}
+
+/* Add these animation keyframes to your CSS */
+@keyframes firstTab {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  33% {
+    transform: translateY(-10px);
+  }
+  66% {
+    transform: translateY(px);
+  }
+  75% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes secondTab {
+  0%,
+  33%,
+  100% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-10px);
+  }
+  85% {
+    transform: translateY(5px);
+  }
+  92% {
+    transform: translateY(0);
+  }
 }
