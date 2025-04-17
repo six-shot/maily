@@ -12,8 +12,11 @@ import left from "../../public/left.svg";
 import mail1 from "../../public/mail1.avif";
 import organize from "../../public/organize.png";
 import testimonial from "../../public/testimonial.avif";
-import samantha from "../../public/samantha.png"
-import star from "../../public/star.png"
+import samantha from "../../public/samantha.png";
+import star from "../../public/star.png";
+import cta from "../../public/cta.png";
+import book from "../../public/book.png";
+import organizee from "../../public/organise.png";
 import Marquee from "react-fast-marquee";
 export default function Home() {
   const testimonials = [
@@ -410,7 +413,7 @@ export default function Home() {
                   ))}
                 </div>
               </Marquee>
-              <Marquee className="mt-[38px]" direction="right" speed={40} >
+              <Marquee className="mt-[38px]" direction="right" speed={40}>
                 <div className="flex flex-wrap">
                   {testimonials.map((testimonial, idx) => (
                     <div
@@ -449,6 +452,30 @@ export default function Home() {
                   ))}
                 </div>
               </Marquee>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-[456px] relative rounded-[50px]">
+          <Image src={book} className="absolute bottom-0 right-0" alt="book" />
+          <Image
+            src={organizee}
+            className="absolute bottom-0 left-0 "
+            alt="organize"
+          />
+          <Image className="w-full h-full rounded-[50px]" src={cta} alt="cta" />
+          <div className="absolute top-0 left-0 w-full h-full z-10">
+            <div className="flex flex-col justify-center items-center h-full font-[family-name:var(--font-inter)]">
+              <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] text-center mb-[29px] ">
+                The Best Enail
+                <br /> Ever Made
+              </h3>
+              <p className="text-[17px] text-black/70 leading-[27px]">
+                Discover how Maily helps teams, businesses, and <br />
+                individuals stay organized, productive, and stress-free
+              </p>
+              <button className="h-[65px] px-[60px] get-started-btn text-[22px] font-bold font-[family-name:var(--font-inter)] text-white mt-[35px]">
+                Try it first
+              </button>
             </div>
           </div>
         </div>
