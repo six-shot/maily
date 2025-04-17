@@ -55,20 +55,20 @@ export default function Home() {
           <Navbar />
         </div>
         <div className=" pl-[14px] pr-5 h-[68px] bg-white rounded-[100px] flex gap-2.5 items-center mt-[99px] relative z-10">
-          <div className="flex items-center">
+          <div className="flex items-center group">
             <Image
               src={one}
-              className="w-[44px] h-[44px] -mr-4 border border-[#FBFBF8] rounded-full first-bg relative z-10"
+              className="w-[44px] h-[44px] -mr-4 border border-[#FBFBF8] rounded-full first-bg relative z-10 transition-all duration-300 ease-in-out group-hover:-translate-x-1"
               alt="one"
             />
             <Image
               src={second}
-              className="w-[44px] h-[44px] -mr-3 border border-[#FBFBF8] rounded-full second-bg relative z-[8]"
+              className="w-[44px] h-[44px] -mr-3 border border-[#FBFBF8] rounded-full second-bg relative z-[8] transition-all duration-300 ease-in-out group-hover:translate-x"
               alt="two"
             />
             <Image
               src={third}
-              className="w-[44px] h-[44px] border border-[#FBFBF8] rounded-full third-bg relative "
+              className="w-[44px] h-[44px] border border-[#FBFBF8] rounded-full third-bg relative transition-all duration-300 ease-in-out group-hover:translate-x-1"
               alt="three"
             />
           </div>
