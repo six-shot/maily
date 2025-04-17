@@ -7,12 +7,12 @@ import second from "../../public/second.png";
 import third from "../../public/third.png";
 import mask from "../../public/mask.svg";
 import blur from "../../public/Blur.png";
+import right from "../../public/right.svg";
+import left from "../../public/left.svg";
 export default function Home() {
   return (
     <div>
-    
       <div className="hero-bg h-[847px] bg relative">
-     
         <div className="absolute -top-[325px] w-[1558px] h-[1558px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center blur-[1px]">
           <div className="w-[1223px] h-[1223px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center">
             <div className="w-[904px] h-[904px] border border-[rgba(255,255,255,0.59)] rounded-full  "></div>
@@ -46,9 +46,21 @@ export default function Home() {
           </h6>
         </div>
         <div className=" z-10 flex flex-col items-center">
-          <h1 className="mt-[38px] font-[family-name:var(--font-montserrat)] text-[90px] text-[rgba(255,255,255,0.94)] font-black leading-[90px] text-center">
+          <h1 className="mt-[38px] font-[family-name:var(--font-montserrat)] text-[90px] text-[rgba(255,255,255,0.94)] font-black leading-[90px] text-center ">
             The best email,
-            <br /> ever made.
+          </h1>
+          <h1 className=" font-[family-name:var(--font-montserrat)] text-[90px] text-[rgba(255,255,255,0.94)] font-black leading-[90px] text-center relative">
+           ever made.
+            <Image
+              src={right}
+              alt="right"
+              className="absolute -right-8 top-5"
+            />
+            <Image
+              src={left}
+              alt="left"
+              className="absolute -left-11 top-1"
+            />
           </h1>
           <p className="mt-[17px] text-[white]/70 text-[18px] font-[family-name:var(--font-inter)] leading-[27px]">
             Get real-time notifications with our email app, ensuring you
