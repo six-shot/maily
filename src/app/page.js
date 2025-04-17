@@ -9,12 +9,43 @@ import mask from "../../public/mask.svg";
 import blur from "../../public/Blur.png";
 import right from "../../public/right.svg";
 import left from "../../public/left.svg";
+import mail1 from "../../public/mail1.avif";
 export default function Home() {
   return (
     <div>
       <div className="hero-bg h-[847px] bg relative">
-        <div className="absolute -top-[325px] w-[1558px] h-[1558px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center blur-[1px]">
-          <div className="w-[1223px] h-[1223px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center">
+        <div className="absolute -top-[325px] w-[1558px] h-[1558px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center ">
+          <div className="w-[1223px] h-[1223px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center relative">
+            <Image
+              src={mail1}
+              alt="mail"
+              className="absolute bottom-[15%] left-[2%] w-[267px] h-[171px] rotate-[34deg] blur-[2px]"
+            />
+            <Image
+              src={mail1}
+              alt="mail"
+              className="absolute bottom-[10%] -right-[17%] w-[337px] h-[216px] rotate-[-28deg] blur-[5px]"
+            />
+            <Image
+              src={mail1}
+              alt="mail"
+              className="absolute top-[11%] -right-[24%] w-[337px] h-[216px] rotate-[3deg] blur-[8px]"
+            />
+            <Image
+              src={mail1}
+              alt="mail"
+              className="absolute top-[22%] -left-[0%] w-[151px] h-[101px] rotate-[12deg] blur-[4px]"
+            />
+            <Image
+              src={mail1}
+              alt="mail"
+              className="absolute top-[45%] left-[10%] w-[89px] h-[57px] rotate-[25deg] "
+            />
+            <Image
+              src={mail1}
+              alt="mail"
+              className="absolute top-[45%] -right-[4%] w-[183px] h-[117px] rotate-[-33deg] "
+            />
             <div className="w-[904px] h-[904px] border border-[rgba(255,255,255,0.59)] rounded-full  "></div>
           </div>
         </div>
@@ -50,17 +81,13 @@ export default function Home() {
             The best email,
           </h1>
           <h1 className=" font-[family-name:var(--font-montserrat)] text-[90px] text-[rgba(255,255,255,0.94)] font-black leading-[90px] text-center relative">
-           ever made.
+            ever made.
             <Image
               src={right}
               alt="right"
               className="absolute -right-8 top-5"
             />
-            <Image
-              src={left}
-              alt="left"
-              className="absolute -left-11 top-1"
-            />
+            <Image src={left} alt="left" className="absolute -left-11 top-1" />
           </h1>
           <p className="mt-[17px] text-[white]/70 text-[18px] font-[family-name:var(--font-inter)] leading-[27px]">
             Get real-time notifications with our email app, ensuring you
