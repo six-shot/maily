@@ -172,3 +172,10 @@ body {
     transform: translateY(0);
   }
 }
+
+
+.testimonial-card{
+  border-radius: 40px;
+background: linear-gradient(180deg, #FFF 0%, #B5D8FF 100%);
+
+}

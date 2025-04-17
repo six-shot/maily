@@ -12,7 +12,85 @@ import left from "../../public/left.svg";
 import mail1 from "../../public/mail1.avif";
 import organize from "../../public/organize.png";
 import testimonial from "../../public/testimonial.avif";
+import samantha from "../../public/samantha.png"
+import star from "../../public/star.png"
+import Marquee from "react-fast-marquee";
 export default function Home() {
+  const testimonials = [
+    {
+      name: "Samantha Collins",
+      text: `I can’t imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      image: samantha,
+      rating: 5,
+    },
+    {
+      name: "James Parker",
+      text: `It keeps my projects on track like nothing else. Easy to use, beautifully designed, and super reliable.`,
+      image: samantha,
+      rating: 4,
+    },
+    {
+      name: "Aisha Khan",
+      text: `Finally, an app that does what it promises. I’m more productive and less stressed. Total win.`,
+      image: samantha,
+      rating: 5,
+    },
+    {
+      name: "Samantha Collins",
+      text: `I can’t imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      image: samantha,
+      rating: 5,
+    },
+    {
+      name: "James Parker",
+      text: `It keeps my projects on track like nothing else. Easy to use, beautifully designed, and super reliable.`,
+      image: samantha,
+      rating: 4,
+    },
+    {
+      name: "Aisha Khan",
+      text: `Finally, an app that does what it promises. I’m more productive and less stressed. Total win.`,
+      image: samantha,
+      rating: 5,
+    },
+    {
+      name: "Samantha Collins",
+      text: `I can’t imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      image: samantha,
+      rating: 5,
+    },
+    {
+      name: "James Parker",
+      text: `It keeps my projects on track like nothing else. Easy to use, beautifully designed, and super reliable.`,
+      image: samantha,
+      rating: 4,
+    },
+    {
+      name: "Aisha Khan",
+      text: `Finally, an app that does what it promises. I’m more productive and less stressed. Total win.`,
+      image: samantha,
+      rating: 5,
+    },
+    {
+      name: "Samantha Collins",
+      text: `I can’t imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      image: samantha,
+      rating: 5,
+    },
+    {
+      name: "James Parker",
+      text: `It keeps my projects on track like nothing else. Easy to use, beautifully designed, and super reliable.`,
+      image: samantha,
+      rating: 4,
+    },
+    {
+      name: "Aisha Khan",
+      text: `Finally, an app that does what it promises. I’m more productive and less stressed. Total win.`,
+      image: samantha,
+      rating: 5,
+    },
+  ];
+
   return (
     <div>
       <div className="hero-bg h-[847px] bg relative">
@@ -292,6 +370,86 @@ export default function Home() {
               Why <span className="text-white/50">people</span> <br /> love
               Maily.
             </h3>
+            <div className="absolute left-[50%] translate-x-[-50%] w-screen  mt-[67px] font-[family-name:var(--font-inter)] overflow-hidden">
+              <Marquee className="" direction="left" speed={40}>
+                <div className="flex flex-wrap gap-6">
+                  {testimonials.map((testimonial, idx) => (
+                    <div
+                      key={idx}
+                      className="w-[580px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px]"
+                    >
+                      <p className="text-[17px] text-black/70 leading-[27px]">
+                        {testimonial.text}
+                      </p>
+
+                      <div className="mt-[27px] flex gap-[27px] items-center">
+                        <Image
+                          className="w-20 h-20 rounded-full bg-white/0 shadow-[0px_5px_10px_0px_rgba(0,0,0,0.10),_0px_20px_15px_0px_rgba(0,0,0,0.17)]"
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                        />
+                        <div className="flex flex-col gap-3">
+                          <h5 className="font-medium">{testimonial.name}</h5>
+                          <div className="flex gap-2">
+                            {[...Array(testimonial.rating)].map((_, i) => (
+                              <div
+                                key={i}
+                                className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-white shadow-[inset_0px_-1px_1px_0px_rgba(10,114,237,0.64)]"
+                              >
+                                <Image
+                                  className="w-[18px] h-[17px]"
+                                  src={star}
+                                  alt="star"
+                                />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Marquee>
+              <Marquee className="mt-[38px]" direction="right" speed={40} >
+                <div className="flex flex-wrap gap-6">
+                  {testimonials.map((testimonial, idx) => (
+                    <div
+                      key={idx}
+                      className="w-[580px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px]"
+                    >
+                      <p className="text-[17px] text-black/70 leading-[27px]">
+                        {testimonial.text}
+                      </p>
+
+                      <div className="mt-[27px] flex gap-[27px] items-center">
+                        <Image
+                          className="w-20 h-20 rounded-full bg-white/0 shadow-[0px_5px_10px_0px_rgba(0,0,0,0.10),_0px_20px_15px_0px_rgba(0,0,0,0.17)]"
+                          src={testimonial.image}
+                          alt={testimonial.name}
+                        />
+                        <div className="flex flex-col gap-3">
+                          <h5 className="font-medium">{testimonial.name}</h5>
+                          <div className="flex gap-2">
+                            {[...Array(testimonial.rating)].map((_, i) => (
+                              <div
+                                key={i}
+                                className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-white shadow-[inset_0px_-1px_1px_0px_rgba(10,114,237,0.64)]"
+                              >
+                                <Image
+                                  className="w-[18px] h-[17px]"
+                                  src={star}
+                                  alt="star"
+                                />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </Marquee>
+            </div>
           </div>
         </div>
       </div>
