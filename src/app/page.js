@@ -178,7 +178,7 @@ export default function Home() {
     },
   ];
   return (
-    <div>
+    <div className="overflow-hidden">
       <div className="hero-bg flex flex-col  tablet:items-center tablet:flex-col w-full tabllet:h-[847px] h-[791px] relative">
         <div className="tablet:flex hidden  absolute -top-[325px] w-[1558px] h-[1558px] border border-[rgba(255,255,255,0.59)] rounded-full  justify-center items-center ">
           <div className="w-[1223px] h-[1223px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center relative">
@@ -367,7 +367,7 @@ export default function Home() {
               Organize all the
               <br className="tablet:flex hidden" /> things you do.
             </h3>
-            <div className="mt-[50px] grid tablet:grid-cols-3 grid-cols-2 gap-4 items-center">
+            <div className="mt-[50px] tablet:flex hidden gap-4 items-center">
               <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Custom Inboxes
               </button>
@@ -377,6 +377,33 @@ export default function Home() {
               <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Scheduling
               </button>
+            </div>
+            <div className="mt-[50px] tablet:hidden flex gap-4 items-center">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
+                Custom Inboxes
+              </button>
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
+                Read Checker
+              </button>
+            </div>
+            <div className="mt-4 tablet:hidden flex gap-4 items-center">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
+                Scheduling
+              </button>
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
+                Book Meetings
+              </button>
+            </div>
+            <div className="mt-4 tablet:hidden flex gap-4 items-center">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
+                Team Support
+              </button>
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
+                AI Writerings
+              </button>
+            </div>
+
+            <div className="mt-4 tablet:flex hidden gap-4 items-center">
               <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Book Meetings
               </button>
@@ -387,11 +414,11 @@ export default function Home() {
                 AI Writer
               </button>
             </div>
-            <div className="flex items-center gap-4 mt-4">
+            <div className="flex tablet:flex-row flex-col tablet:items-center items-start gap-4 mt-4">
               <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Advanced Spam Detection
               </button>
-              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] col-span-2 flex justify-start items-center  rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
+              <button className="tablet:h-[63px] h-[48px]  col-span-2 flex justify-start items-center  rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 And so much more...
               </button>
             </div>
