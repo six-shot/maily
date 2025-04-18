@@ -26,6 +26,15 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Check from "./ui/check";
 import footerMaily from "../../public/footer-maily.png";
+import zoom from "../../public/zoom.png";
+import tg from "../../public/tg.png";
+import visa from "../../public/visa.png";
+import notion from "../../public/notion.png";
+import ms from "../../public/ms.png";
+import vimeo from "../../public/vv.png";
+import youtube from "../../public/youtube.png";
+import bat from "../../public/bat.png"
+import skip from "../../public/vimeo.png"
 export default function Home() {
   const testimonials = [
     {
@@ -528,14 +537,18 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-[456px] relative rounded-[50px]">
-          <Image src={book} className="absolute bottom-0 right-0" alt="book" />
+          <Image
+            src={book}
+            className="absolute bottom-0 right-0 rounded-br-[50px]"
+            alt="book"
+          />
           <Image
             src={organizee}
-            className="absolute bottom-0 left-0 "
+            className="absolute bottom-0 left-0 rounded-bl-[50px] "
             alt="organize"
           />
           <Image
-            className="w-full h-full  object-cover rounded-[50px]"
+            className="w-full h-full  object-cover rounded-[50px] "
             src={cta}
             alt="cta"
           />
@@ -553,6 +566,61 @@ export default function Home() {
                 Try it first
               </button>
             </div>
+          </div>
+        </div>
+        <div className="flex justify-center mt-[90px]">
+          <div className="  h-[760px]  relative flex flex-col justify-center items-center font-[family-name:var(--font-inter)]">
+            <Image
+              className="absolute top-[30px] -left-[70px]"
+              src={zoom}
+              alt="zoom"
+            />
+            <Image
+              className="absolute top-[250px] -left-[300px]"
+              src={notion}
+              alt="zoom"
+            />
+            <Image
+              className="absolute top-[500px] -left-[300px]"
+              src={ms}
+              alt="zoom"
+            />
+            <Image
+              className="absolute top-[30px] right-[100px]"
+              src={tg}
+              alt="zoom"
+            />
+            <Image
+              className="absolute -bottom-[50px] left-[300px]"
+              src={vimeo}
+              alt="zoom"
+            />
+            <Image
+              className="absolute -bottom-[60px] left-[500px]"
+              src={visa}
+              alt="zoom"
+            />
+            <Image
+              className="absolute bottom-[180px] -right-[270px]"
+              src={youtube}
+              alt="zoom"
+            />
+            <Image
+              className="absolute -bottom-[70px] left-[20px]"
+              src={bat}
+              alt="zoom"
+            />
+            <Image
+              className="absolute bottom-[400px] -right-[230px]"
+              src={skip}
+              alt="zoom"
+            />
+            <h3 className="text-[80px] leading-[80px] font-bold text-black">
+              Works <span className="text-black/50">with your </span>
+            </h3>
+            <h3 className="text-[80px] leading-[80px] font-bold text-black">
+              favorite tools...
+            </h3>
           </div>
         </div>
         <div className="flex items-start gap-[60px] mt-[90px]">
