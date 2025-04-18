@@ -19,8 +19,13 @@ import cta from "../../public/cta.png";
 import book from "../../public/book.png";
 import organizee from "../../public/organise.png";
 import Marquee from "react-fast-marquee";
+import twitter from "../../public/x.svg";
+import linkedin from "../../public/linkedin.svg"
+import instagram from "../../public/instagram.svg"
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Check from "./ui/check";
+import footerMaily from "../../public/footer-maily.png";
 export default function Home() {
   const testimonials = [
     {
@@ -96,6 +101,48 @@ export default function Home() {
       rating: 5,
     },
   ];
+  const pricingTiers = [
+    {
+      name: "Basic",
+      price: "$0",
+      description: "All the email basics in one package.",
+      features: [
+        "Unlimited mails",
+        "2 Team members",
+        "30 AI credits per month",
+        "Scheduling",
+        "Privacy reports",
+      ],
+      cta: "Get started today",
+    },
+    {
+      name: "Premium",
+      price: "$30",
+      description: "More power for growing teams.",
+      features: [
+        "Everything in Basic",
+        "10 Team members",
+        "200 AI credits per month",
+        "Priority support",
+        "Advanced analytics",
+      ],
+      cta: "Upgrade to Premium",
+    },
+    {
+      name: "Business",
+      price: "$100",
+      description: "Built for large organizations.",
+      features: [
+        "Everything in Premium",
+        "Unlimited team members",
+        "2000 AI credits per month",
+        "Dedicated manager",
+        "Custom integrations",
+      ],
+      cta: "Contact sales",
+    },
+  ];
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const data = [
     {
@@ -535,7 +582,7 @@ export default function Home() {
         </div>
       </div>
       <div className="mt-[90px] footer-bg">
-        <div className="py-[48px] max-w-[1440px] mx-auto">
+        <div className="pt-[48px] pb-[100px] max-w-[1440px] mx-auto">
           <div className=" font-[family-name:var(--font-inter)] flex justify-between  items-center  w-full">
             <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] ">
               Simple pricing
@@ -546,21 +593,88 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-3 gap-6 mt-[120px]">
-            <div className="w-full h-[632px] faq-card p-[48px] font-[family-name:var(--font-inter)] ">
-              <h6>Basic</h6>
-              <div className="mt-[11px] flex items-end">
-                <h5 className="text-[48px] leading-[58px]">$0</h5>
-                <p className="text-[28px] text-[rgba(0,0,0,0.45)] leading-[34px] pb-[5px]">
-                  /month
+            {pricingTiers.map((tier, index) => (
+              <div
+                key={index}
+                className="w-full faq-card p-[48px] font-[family-name:var(--font-inter)]"
+              >
+                <h6>{tier.name}</h6>
+                <div className="mt-[11px] flex items-end">
+                  <h5 className="text-[48px] leading-[58px]">{tier.price}</h5>
+                  <p className="text-[28px] text-[rgba(0,0,0,0.45)] leading-[34px] pb-[5px]">
+                    /month
+                  </p>
+                </div>
+                <p className="text-[17px] text-black opacity-[0.45] leading-[27px] mt-5 mb-[35px]">
+                  {tier.description}
+                </p>
+                <button className="relative px-10 h-[48px] text-white text-base rounded-[15px] bg-black shadow-[0px_2px_0px_0px_#B7B7B7,_inset_0px_5px_14px_0px_rgba(255,255,255,0.5)] font-medium overflow-hidden">
+                  <span className="relative z-10">{tier.cta}</span>
+                  <div className="shine-effect absolute top-1/2 -translate-y-1/2 w-[298px] h-[298px] rotate-45 opacity-40 bg-[radial-gradient(99.24%_17%_at_50%_50%,rgba(255,255,255,0.5)_0%,rgba(68,68,68,0)_100%)] blur-[5px]" />
+                </button>
+                <div className="mt-[31px] mb-[34px] border border-[rgba(0,0,0,0.10)]" />
+                <div className="flex gap-4 flex-col">
+                  {tier.features.map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-[11px]">
+                      <Check />
+                      <p className="text-[17px] text-black opacity-[0.45] leading-[27px]">
+                        {feature}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-[120px]">
+            <Image className="w-full " src={footerMaily} alt="footer-maily" />
+            <div className="mt-[100px] flex items-center justify-between font-[family-name:var(--font-inter)]">
+              <div className="flex flex-col gap-[18px]">
+                <h5 className="text-[40px] leading-[48px] text-white">
+                  Maily.io
+                </h5>
+                <p className="text-[16px] text-white/70 w-[284px] leading-[24px]">
+                  Secure funding for your startup from over 5,000 investors,
+                  making the process seamless and efficient.
                 </p>
               </div>
-              <p className="text-[17px] text-black opacity-[0.45] leading-[27px] mt-5 mb-[35px]">
-                All the email basics in one package.
-              </p>
-              <button className="h-[65px] px-[40px] get-started-btn text-[22px] font-medium font-[family-name:var(--font-inter)] text-white">
-                Get started today
-              </button>
-              <div className="mt-[31px] border border-[rgba(0,0,0,0.10)]" />
+              <div className="flex gap-[95px] ">
+                <div className="flex gap-[57px]">
+                  <div className="flex flex-col">
+                    <h5 className="text-[24px] text-white font-medium">
+                      Legal
+                    </h5>
+                    <div className="mt-[26px] flex gap-6 flex-col">
+                      <h6 className="text-white/70 leading-[24px]">
+                        Privacy Policy
+                      </h6>
+                      <h6 className="text-white/70 leading-[24px]">404</h6>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col">
+                    <h5 className="text-[24px] text-white font-medium">Menu</h5>
+                    <div className="mt-[26px] flex gap-6 flex-col">
+                      <h6 className="text-white leading-[24px]">Home</h6>
+                      <h6 className="text-white/70 leading-[24px]">
+                        Solutions
+                      </h6>
+                      <h6 className="text-white/70 leading-[24px]">Pricing</h6>
+                      <h6 className="text-white/70 leading-[24px]">Contacts</h6>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-6">
+                  <h5 className="text-[24px] text-white font-medium">
+                    Social Media
+                  </h5>
+                  <div className="flex items-center gap-5">
+                    <Image src={twitter} alt="twitter" />
+                    <Image src={linkedin} alt="linkedin" />
+                    <Image src={instagram} alt="instagram" />.
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
