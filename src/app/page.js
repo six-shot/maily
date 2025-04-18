@@ -20,8 +20,8 @@ import book from "../../public/book.png";
 import organizee from "../../public/organise.png";
 import Marquee from "react-fast-marquee";
 import twitter from "../../public/x.svg";
-import linkedin from "../../public/linkedin.svg"
-import instagram from "../../public/instagram.svg"
+import linkedin from "../../public/linkedin.svg";
+import instagram from "../../public/instagram.svg";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Check from "./ui/check";
@@ -33,19 +33,19 @@ import notion from "../../public/notion.png";
 import ms from "../../public/ms.png";
 import vimeo from "../../public/vv.png";
 import youtube from "../../public/youtube.png";
-import bat from "../../public/bat.png"
-import skip from "../../public/vimeo.png"
+import bat from "../../public/bat.png";
+import skip from "../../public/vimeo.png";
 export default function Home() {
   const testimonials = [
     {
       name: "Samantha Collins",
-      text: `I can't imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 5,
     },
     {
       name: "James Parker",
-      text: `It keeps my projects on track like nothing else. Easy to use, beautifully designed, and super reliable.`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 4,
     },
@@ -56,14 +56,14 @@ export default function Home() {
       rating: 5,
     },
     {
-      name: "Samantha Collins",
-      text: `I can't imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      name: "Aisha Khan",
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 5,
     },
     {
       name: "James Parker",
-      text: `It keeps my projects on track like nothing else. Easy to use, beautifully designed, and super reliable.`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 4,
     },
@@ -74,14 +74,15 @@ export default function Home() {
       rating: 5,
     },
     {
-      name: "Samantha Collins",
-      text: `I can't imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      name: "Aisha Khan",
+
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 5,
     },
     {
       name: "James Parker",
-      text: `It keeps my projects on track like nothing else. Easy to use, beautifully designed, and super reliable.`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 4,
     },
@@ -92,14 +93,15 @@ export default function Home() {
       rating: 5,
     },
     {
-      name: "Samantha Collins",
-      text: `I can't imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      name: "Aisha Khan",
+
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 5,
     },
     {
       name: "James Parker",
-      text: `It keeps my projects on track like nothing else. Easy to use, beautifully designed, and super reliable.`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 4,
     },
@@ -177,8 +179,8 @@ export default function Home() {
   ];
   return (
     <div>
-      <div className="hero-bg h-[847px] bg relative">
-        <div className="absolute -top-[325px] w-[1558px] h-[1558px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center ">
+      <div className="hero-bg flex flex-col  tablet:items-center tablet:flex-col w-full tabllet:h-[847px] h-[791px] relative">
+        <div className="tablet:flex hidden  absolute -top-[325px] w-[1558px] h-[1558px] border border-[rgba(255,255,255,0.59)] rounded-full  justify-center items-center ">
           <div className="w-[1223px] h-[1223px] border border-[rgba(255,255,255,0.59)] rounded-full flex justify-center items-center relative">
             <Image
               src={mail1}
@@ -214,79 +216,83 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="fixed z-[1000]">
+        <div className="fixed w-full tablet:w-auto z-[1000]">
           <Navbar />
         </div>
-        <div className=" pl-[14px] pr-5 h-[68px] bg-white rounded-[100px] flex gap-2.5 items-center mt-[188px] relative z-10">
-          <div className="flex items-center group">
-            <Image
-              src={one}
-              className="w-[44px] h-[44px] -mr-4 border border-[#FBFBF8] rounded-full first-bg relative z-10 transition-all duration-300 ease-in-out group-hover:-translate-x-1"
-              alt="one"
-            />
-            <Image
-              src={second}
-              className="w-[44px] h-[44px] -mr-3 border border-[#FBFBF8] rounded-full second-bg relative z-[8] transition-all duration-300 ease-in-out group-hover:translate-x"
-              alt="two"
-            />
-            <Image
-              src={third}
-              className="w-[44px] h-[44px] border border-[#FBFBF8] rounded-full third-bg relative transition-all duration-300 ease-in-out group-hover:translate-x-1"
-              alt="three"
-            />
+        <div className="w-full flex justify-center">
+          <div className=" pl-[14px] pr-5 tablet:h-[68px] h-[51px] bg-white rounded-[100px] flex gap-2.5 items-center tablet:mt-[188px] mt-[160px] relative z-10 ">
+            <div className="flex items-center group">
+              <Image
+                src={one}
+                className="tablet:w-[44px] tablet:h-[44px] w-[27px] h-[27px] -mr-4 border border-[#FBFBF8] rounded-full first-bg relative z-10 transition-all duration-300 ease-in-out group-hover:-translate-x-1"
+                alt="one"
+              />
+              <Image
+                src={second}
+                className="tablet:w-[44px] tablet:h-[44px] w-[27px] h-[27px]-mr-3 border border-[#FBFBF8] rounded-full second-bg relative z-[8] transition-all duration-300 ease-in-out group-hover:translate-x"
+                alt="two"
+              />
+              <Image
+                src={third}
+                className="tablet:w-[44px] tablet:h-[44px] w-[27px] h-[27px] border border-[#FBFBF8] rounded-full third-bg relative transition-all duration-300 ease-in-out group-hover:translate-x-1"
+                alt="three"
+              />
+            </div>
+            <h6 className="text-black/70 tablet:text-[17px] text-[16px] font-[family-name:var(--font-inter)]">
+              6,000+ people use our product
+            </h6>
           </div>
-          <h6 className="text-black/70 text-[17px] font-[family-name:var(--font-inter)]">
-            6,000+ people use our product
-          </h6>
         </div>
         <div className=" z-10 flex flex-col items-center">
-          <h1 className="mt-[38px] font-[family-name:var(--font-montserrat)] text-[90px] text-[rgba(255,255,255,0.94)] font-black leading-[90px] text-center ">
+          <h1 className="tablet:mt-[38px] mt-[43px] font-[family-name:var(--font-montserrat)] tablet:text-[90px] text-[41px] text-[rgba(255,255,255,0.94)] font-black tablet:leading-[90px] leading-[41px] text-center ">
             The best email,
           </h1>
-          <h1 className=" font-[family-name:var(--font-montserrat)] text-[90px] text-[rgba(255,255,255,0.94)] font-black leading-[90px] text-center relative">
+          <h1 className=" font-[family-name:var(--font-montserrat)] tablet:text-[90px] text-[41px] text-[rgba(255,255,255,0.94)] font-black tablet:leading-[90px] leading-[41px] text-center relative">
             ever made.
             <Image
               src={right}
               alt="right"
-              className="absolute -right-8 top-5"
+              className="tablet:block hidden absolute -right-8 top-5"
             />
-            <Image src={left} alt="left" className="absolute -left-11 top-1" />
+            <Image
+              src={left}
+              alt="left"
+              className="tablet:block hidden absolute -left-11 top-1"
+            />
           </h1>
-          <p className="mt-[17px] text-[white]/70 text-[18px] font-[family-name:var(--font-inter)] leading-[27px]">
-            Get real-time notifications with our email app, ensuring you
+          <p className="tablet:mt-[17px] mt-[31px] text-[white]/70 text-[18px] font-[family-name:var(--font-inter)] leading-[27px] text-center tablet:w-auto w-[355px]">
+            Get real-time notifications with our email app, ensuring you{" "}
+            <br className="tablet:flex hidden" /> never miss an important
+            message.
           </p>
-          <p className=" text-[white] text-[18px] font-[family-name:var(--font-inter)] leading-[27px]">
-            never miss an important message.
-          </p>
-          <div className="mt-[27px] flex gap-[19px] items-center">
-            <button className="h-[65px] px-[60px] get-started-btn text-[22px] font-bold font-[family-name:var(--font-inter)] text-white">
+
+          <div className="tablte:mt-[27px] mt-[35px] flex tablet:flex-row flex-col gap-[19px] items-center">
+            <button className="tablet:h-[65px] h-[53px] tablet:px-[60px] px-[40px] get-started-btn tablet:text-[22px] text-[18px] font-bold font-[family-name:var(--font-inter)] text-white">
               Get Started
             </button>
-            <button className="h-[65px] px-[60px] explore-btn text-[22px] font-medium font-[family-name:var(--font-inter)] text-black">
+            <button className="tablet:h-[65px] h-[53px] tablet:px-[60px] px-[40px] explore-btn tablet:text-[22px] text-[18px] font-medium font-[family-name:var(--font-inter)] text-black">
               𝕏 Reach us
             </button>
           </div>
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto px-[48px]">
-        <div className="mt-[90px] flex justify-between">
-          <h2 className="text-[56px] font-[family-name:var(--font-inter)] text-[rgba(0,0,0,0.94)] font-bold leading-[56px]">
-            Features you <br /> will love.
+      <div className="max-w-[1440px] mx-auto tablet:px-[48px] px-4">
+        <div className="mt-[90px] flex tablet:flex-row flex-col justify-between tablet:gap-0 gap-6">
+          <h2 className="tablet:text-[56px] text-[32px] font-[family-name:var(--font-inter)] text-[rgba(0,0,0,0.94)] font-bold tablet:leading-[56px] leading-8">
+            Features you <br className="tablet:flex hidden" /> will love.
           </h2>
-          <div>
-            <p className="text-[17px] font-[family-name:var(--font-inter)] text-[black]/70 leading-[27px] w-[351px] text-right">
+          <div className="">
+            <p className="tablet:text-[17px] text-base font-[family-name:var(--font-inter)] text-[black]/70 leading-[27px] w-[351px] tablet:text-right">
               Manage emails for over 5,000 startups all over the world, making
-              the process
-            </p>
-            <p className="text-[17px] font-[family-name:var(--font-inter)] text-[black]/70 leading-[27px] w-[351px] text-right ">
-              seamless and efficient
+              the process <br className="tablet:flex hidden" /> seamless and
+              efficient
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-6 mt-[56px]">
+        <div className="grid tablet:grid-cols-3 gap-6 mt-[56px]">
           <div className="p-2 border border-white rounded-[50px] shadow-[0_1px_1px_#0000001a,_0_1.5px_1.5px_#00000017,_0_4px_2.5px_#0000000d]">
             <div className="w-full card-bg h-[258px]"></div>
-            <div className="py-[33px] px-4">
+            <div className="tablet:py-[33px] py-[25px] tablet:px-4 px-8">
               <p className="text-[15px] font-[family-name:var(--font-inter)] text-[black]/50 leading-[22px]">
                 We ensure every message stays{" "}
                 <span className="text-black">
@@ -299,7 +305,7 @@ export default function Home() {
           </div>
           <div className="p-2 border border-white rounded-[50px] shadow-[0_1px_1px_#0000001a,_0_1.5px_1.5px_#00000017,_0_4px_2.5px_#0000000d]">
             <div className="w-full card-bg h-[258px]"></div>
-            <div className="py-[33px] px-4">
+            <div className="tablet:py-[33px] py-[25px] tablet:px-4 px-8">
               <p className="text-[15px] font-[family-name:var(--font-inter)] text-[black]/50 leading-[22px]">
                 Never miss an{" "}
                 <span className="text-black">important message</span>. Get
@@ -313,7 +319,7 @@ export default function Home() {
           </div>
           <div className="p-2 border border-white rounded-[50px] shadow-[0_1px_1px_#0000001a,_0_1.5px_1.5px_#00000017,_0_4px_2.5px_#0000000d]">
             <div className="w-full card-bg h-[258px]"></div>
-            <div className="py-[33px] px-4">
+            <div className="tablet:py-[33px] py-[25px] tablet:px-4 px-8">
               <p className="text-[15px] font-[family-name:var(--font-inter)] text-[black]/50 leading-[22px]">
                 Identify errors with{" "}
                 <span className="text-black">
@@ -327,130 +333,136 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-[720px] category-bg mt-[90px] flex justify-center items-center flex-col font-[family-name:var(--font-inter)] gap-[14px] relative">
-          <h5 className="text-[22px] text-black/30 font-black">AI-TAGS</h5>
-          <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] text-center">
+          <h5 className="tablet:text-[22px] text-[18px] text-black/30 font-black">
+            AI-TAGS
+          </h5>
+          <h3 className="text-[rgba(0,0,0,0.94)] tablet:text-[56px] text-[32px] font-bold tablet:leading-[56px] leading-[32px] text-center tablet:mt-0  mt-5">
             Categorization?
-            <br /> Done for you!
+            <br className="" /> Done for you!
           </h3>
           <div className="absolute top-[74px] left-[145px]">
-            <button className="flex items-center gap-[17px] design-btn px-[38px] h-[102px] text-[36px] font-extrabold text-[rgba(255,255,255,0.87)] rotate-[-2deg]">
+            <button className="flex items-center gap-[17px] design-btn px-[38px] tablet:h-[102px] h-[82px] tablet:text-[36px] text-[24px] font-extrabold text-[rgba(255,255,255,0.87)] rotate-[-2deg]">
               👨‍🎨 Design
             </button>
           </div>
-          <div className="absolute top-[68px] right-[107px]">
+          <div className="tablet:flex hidden  absolute top-[68px] right-[107px]">
             <button className="flex items-center gap-[17px] family-btn px-[38px] h-[102px] text-[36px] font-extrabold text-[rgba(255,255,255,0.87)] rotate-[10deg]">
               ✨ Family
             </button>
           </div>
           <div className="absolute bottom-[52px] left-[94px]">
-            <button className="flex items-center gap-[17px] it-team-btn px-[38px] h-[102px] text-[36px] font-extrabold text-[rgba(255,255,255,0.87)] rotate-[6deg]">
-              👨‍💻 IT Team
+            <button className="flex items-center gap-[17px] it-team-btn px-[38px] h-[102px] tablet:text-[36px] text-[32px] font-extrabold text-[rgba(255,255,255,0.87)] rotate-[6deg]">
+              👨‍💻 IT-Team
             </button>
           </div>
-          <div className="absolute bottom-[110px] right-[146px]">
+          <div className=" tablet:flex hidden   absolute bottom-[110px] right-[146px]">
             <button className="flex items-center gap-[17px] work-btn px-[38px] h-[102px] text-[36px] font-extrabold text-[rgba(255,255,255,0.87)] rotate-[6deg]">
               💼 Work
             </button>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-[48px] items-center mt-[90px] font-[family-name:var(--font-inter)] py-[56px]">
-          <div>
-            <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] ">
+        <div className="grid tablet:grid-cols-2 gap-[48px] items-center mt-[90px] font-[family-name:var(--font-inter)] py-[56px]">
+          <div className="overflow-hidden">
+            <h3 className="text-[rgba(0,0,0,0.94)] tablet:text-[56px] text-[32px] font-bold tablet:leading-[56px] leading-[32px] ">
               Organize all the
-              <br /> things you do.
+              <br className="tablet:flex hidden" /> things you do.
             </h3>
-            <div className="mt-[50px] grid grid-cols-3 gap-4 items-center">
-              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px] text-nowrap">
+            <div className="mt-[50px] grid tablet:grid-cols-3 grid-cols-2 gap-4 items-center">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Custom Inboxes
               </button>
-              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Read Checker
               </button>
-              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Scheduling
               </button>
-              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Book Meetings
               </button>
-              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Team Support
               </button>
-              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 AI Writer
               </button>
             </div>
             <div className="flex items-center gap-4 mt-4">
-              <button className="h-[63px] px-[36px] bg-[#F0F0F0] rounded-[100px] text-black/50 text-[18px]">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] bg-[#F0F0F0] rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 Advanced Spam Detection
               </button>
-              <button className="h-[63px] px-[36px] col-span-2 flex justify-start items-center  rounded-[100px] text-black/50 text-[18px]">
+              <button className="tablet:h-[63px] h-[48px] tablet:px-[36px] px-[24px] col-span-2 flex justify-start items-center  rounded-[100px] text-black/50 tablet:text-[18px] text-[16px] text-nowrap">
                 And so much more...
               </button>
             </div>
           </div>
-          <div className="w-[692px] h-[525px] border-[3px] border-[rgba(255,255,255,0.24)] rounded-[46px] relative overflow-hidden">
+          <div className="tablet:w-[692px] tablet:h-[500px] w-full h-[450px]  border-[3px] border-[rgba(255,255,255,0.24)] rounded-[46px] relative overflow-hidden">
             <Image
               className="w-full h-full object-cover rounded-[46px]"
               src={organize}
               alt="organize"
             />
-            <div className="absolute top-0 left-0 w-full h-[234px] pl-[46px] pt-[40px]">
-              <div className="pl-[59px] flex gap-[27px]">
-                <div className="px-8 pt-4  work-tab relative text-[26px] text-white leading-8 flex justify-center pb-[48px] animate-[firstTab_1.5s_ease-in-out_infinite]">
+            <div className="absolute top-0 left-0 w-full h-[234px] tablet:pl-[46px] pl-6 pt-[40px]">
+              <div className="tablet:pl-[59px] pl-8 flex tablet:gap-[27px] gap-[16px]">
+                <div className="px-8 pt-4  work-tab relative tablet:text-[26px] text-[18px] text-white leading-8 flex justify-center pb-[48px] animate-[firstTab_1.5s_ease-in-out_infinite]">
                   Work
                 </div>
-                <div className="px-8 pt-4 it-team-tab relative text-[26px] text-white leading-8 flex justify-center pb-[64px] animate-[secondTab_1.5s_ease-in-out_infinite]">
+                <div className="px-8 pt-4 it-team-tab relative tablet:text-[26px] text-[18px] text-white leading-8 flex justify-center pb-[64px] animate-[secondTab_1.5s_ease-in-out_infinite]">
                   IT Team
                 </div>
               </div>
-              <div className="-mt-[48px]">
-                <div className="h-[234px] work w-full pl-[48px] flex gap-[48px] items-center  rounded-l-[72px] relative z-10">
+              <div className="tablet:-mt-[48px] -mt-[55px]">
+                <div className="tablet:h-[234px] h-[186px] work w-full tablet:pl-[48px] pl-8 flex tablet:gap-[48px] gap-[32px] items-center  tablet:rounded-l-[72px] rounded-l-[56px] relative z-10">
                   <Image
                     src={bg2}
-                    className="w-[150px] h-[150px] rounded-full border border-[#FBFBF8] google-bg"
+                    className="tablet:w-[150px] w-[100px] tablet:h-[150px] h-[100px] rounded-full border border-[#FBFBF8] google-bg"
                     alt="bg2"
                   />
                   <div className="max-w-[700px] overflow-hidden">
-                    <h5 className="text-[38px] text-[rgba(0,0,0,0.83)] font-bold leading-[46px] mb-3">
+                    <h5 className="tablet:text-[38px] text-[28px] text-[rgba(0,0,0,0.83)] font-bold tablet:leading-[46px] leading-[32px] mb-3">
                       Google Inc.
                     </h5>
-                    <h6 className="text-[22px] text-[rgba(0,0,0,0.83)] font-medium leading-[27px] opacity-[0.6] mb-[9px]">
+                    <h6 className="tablet:text-[22px] text-[20px] text-[rgba(0,0,0,0.83)] font-medium tablet:leading-[27px] leading-[22px] opacity-[0.6] tablet:mb-[9px] mb-3">
                       Add User to Workspace
                     </h6>
-                    <p className="whitespace-nowrap text-[20px] text-[rgba(0,0,0,0.83)] opacity-[0.3]">
+                    <p className="whitespace-nowrap tablet:text-[20px] text-[18px] text-[rgba(0,0,0,0.83)] opacity-[0.3]">
                       New user has been added to your workspace. You can now
                       collaborate seamlessly <br /> within your Google Workspace
                       account.
                     </p>
                   </div>
                 </div>
-                <div className="h-[234px] work w-full  rounded-l-[72px] pl-[48px] flex gap-[48px] items-center mt-[21px]">
+                <div className="tablet:h-[234px] h-[186px] work w-full  rounded-l-[72px] tablet:pl-[48px] pl-8 flex tablet:gap-[48px] gap-[32px] items-center tablet:mt-[21px] mt-4">
                   <Image
                     src={bg2}
-                    className="w-[150px] h-[150px] rounded-full border border-[#FBFBF8] google-bg"
+                    className="tablet:w-[150px] w-[100px] tablet:h-[150px] h-[100px] rounded-full border border-[#FBFBF8] google-bg"
                     alt="bg2"
                   />
                   <div className="max-w-[700px] overflow-hidden">
-                    <h5 className="text-[38px] text-[rgba(0,0,0,0.83)] font-bold leading-[46px] mb-3">
+                    <h5 className="tablet:text-[38px] text-[28px] text-[rgba(0,0,0,0.83)] font-bold tablet:leading-[46px] leading-[32px] mb-3">
                       Slack
                     </h5>
-                    <h6 className="text-[22px] text-[rgba(0,0,0,0.83)] font-medium leading-[27px] opacity-[0.6] mb-[9px]">
+                    <h6 className="tablet:text-[22px] text-[20px] text-[rgba(0,0,0,0.83)] font-medium tablet:leading-[27px] leading-[22px] opacity-[0.6] tablet:mb-[9px] mb-3">
                       You have Been Mentioned
                     </h6>
+                    <p className="whitespace-nowrap tablet:text-[20px] text-[18px] text-[rgba(0,0,0,0.83)] opacity-[0.3]">
+                      Someone in #general just mentioned you! Tap here to check
+                      the message and stay in the loop with your team.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="w-full h-[1010px] rounded-[48px] mt-[107px] mb-[146px] relative">
+        <div className="w-full tablet:h-[1010px] h-[637px] rounded-[48px] mt-[107px] mb-[146px] relative">
           <Image
             src={testimonial}
             alt="testimonial"
             className="w-full h-full object-cover rounded-[48px]"
           />
           <div className="absolute top-0 left-0 w-full h-full z-10 pt-[88px]">
-            <h3 className="text-white text-[80px] font-semibold leading-[80px] text-center font-[family-name:var(--font-inter)]">
+            <h3 className="text-white tablet:text-[80px] text-[42px] font-semibold tablet:leading-[80px] leading-[42px] text-center font-[family-name:var(--font-inter)]">
               Why <span className="text-white/50">people</span> <br /> love
               Maily.
             </h3>
@@ -460,15 +472,15 @@ export default function Home() {
                   {testimonials.map((testimonial, idx) => (
                     <div
                       key={idx}
-                      className="w-[580px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px] mx-3"
+                      className="tablet:w-[580px] w-[300px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px] mx-3"
                     >
-                      <p className="text-[17px] text-black/70 leading-[27px]">
+                      <p className="tablet:text-[17px] text-base text-black/70 leading-[27px]">
                         {testimonial.text}
                       </p>
 
                       <div className="mt-[27px] flex gap-[27px] items-center">
                         <Image
-                          className="w-20 h-20 rounded-full bg-white/0 shadow-[0px_5px_10px_0px_rgba(0,0,0,0.10),_0px_20px_15px_0px_rgba(0,0,0,0.17)]"
+                          className="tablet:w-20 tablet:h-20 w-[52px] h-[52px] rounded-full bg-white/0 shadow-[0px_5px_10px_0px_rgba(0,0,0,0.10),_0px_20px_15px_0px_rgba(0,0,0,0.17)]"
                           src={testimonial.image}
                           alt={testimonial.name}
                         />
@@ -478,10 +490,10 @@ export default function Home() {
                             {[...Array(testimonial.rating)].map((_, i) => (
                               <div
                                 key={i}
-                                className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-white shadow-[inset_0px_-1px_1px_0px_rgba(10,114,237,0.64)]"
+                                className="tablet:w-[30px] tablet:h-[30px] w-[20px] h-[20px] rounded-full flex justify-center items-center bg-white shadow-[inset_0px_-1px_1px_0px_rgba(10,114,237,0.64)]"
                               >
                                 <Image
-                                  className="w-[18px] h-[17px]"
+                                  className="tablet:w-[18px] tablet:h-[17px] w-[12px] h-[12px]"
                                   src={star}
                                   alt="star"
                                 />
@@ -495,19 +507,19 @@ export default function Home() {
                 </div>
               </Marquee>
               <Marquee className="mt-[38px]" direction="right" speed={40}>
-                <div className="flex flex-wrap">
+                <div className="flex flex-wrap ">
                   {testimonials.map((testimonial, idx) => (
                     <div
                       key={idx}
-                      className="w-[580px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px] mx-3"
+                      className="tablet:w-[580px] w-[300px] h-[261px] testimonial-card pt-[41px] pb-[38px] px-[48px] mx-3"
                     >
-                      <p className="text-[17px] text-black/70 leading-[27px]">
+                      <p className="tablet:text-[17px] text-base text-black/70 leading-[27px]">
                         {testimonial.text}
                       </p>
 
                       <div className="mt-[27px] flex gap-[27px] items-center">
                         <Image
-                          className="w-20 h-20 rounded-full bg-white/0 shadow-[0px_5px_10px_0px_rgba(0,0,0,0.10),_0px_20px_15px_0px_rgba(0,0,0,0.17)]"
+                          className="tablet:w-20 tablet:h-20 w-[52px] h-[52px] rounded-full bg-white/0 shadow-[0px_5px_10px_0px_rgba(0,0,0,0.10),_0px_20px_15px_0px_rgba(0,0,0,0.17)]"
                           src={testimonial.image}
                           alt={testimonial.name}
                         />
@@ -517,10 +529,10 @@ export default function Home() {
                             {[...Array(testimonial.rating)].map((_, i) => (
                               <div
                                 key={i}
-                                className="w-[30px] h-[30px] rounded-full flex justify-center items-center bg-white shadow-[inset_0px_-1px_1px_0px_rgba(10,114,237,0.64)]"
+                                className="tablet:w-[30px] tablet:h-[30px] w-[20px] h-[20px] rounded-full flex justify-center items-center bg-white shadow-[inset_0px_-1px_1px_0px_rgba(10,114,237,0.64)]"
                               >
                                 <Image
-                                  className="w-[18px] h-[17px]"
+                                  className="tablet:w-[18px] tablet:h-[17px] w-[12px] h-[12px]"
                                   src={star}
                                   alt="star"
                                 />
@@ -536,15 +548,15 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full h-[456px] relative rounded-[50px]">
+        <div className="w-full tablet:h-[456px] h-[554px] relative rounded-[50px] tablet:py-0 py-[100px]">
           <Image
             src={book}
-            className="absolute bottom-0 right-0 rounded-br-[50px]"
+            className="absolute bottom-0 right-0 rounded-br-[50px] tablet:w-[338px] w-[298px] tablet:h-[263px] h-[232px]"
             alt="book"
           />
           <Image
             src={organizee}
-            className="absolute bottom-0 left-0 rounded-bl-[50px] "
+            className="absolute bottom-0 left-0 rounded-bl-[50px] tablet:w-[394px w-[355px] tablet:h-[233px] h-[210px] "
             alt="organize"
           />
           <Image
@@ -553,22 +565,23 @@ export default function Home() {
             alt="cta"
           />
           <div className="absolute top-0 left-0 w-full h-full z-10">
-            <div className="flex flex-col justify-center items-center h-full font-[family-name:var(--font-inter)]">
-              <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] text-center mb-[29px] ">
+            <div className="flex flex-col justify-center items-center h-full font-[family-name:var(--font-inter)] px-4">
+              <h3 className="text-[rgba(0,0,0,0.94)] tablet:text-[56px] text-[32px] font-bold tablet:leading-[56px] leading-[32px] text-center mb-[29px] ">
                 The Best Enail
                 <br /> Ever Made
               </h3>
-              <p className="text-[17px] text-black/70 leading-[27px]">
-                Discover how Maily helps teams, businesses, and <br />
+              <p className="tablet:text-[17px] text-base text-black/70 tablet:leading-[27px] leading-[24px] text-center">
+                Discover how Maily helps teams, businesses, and{" "}
+                <br className="tablet:flex hidden" />
                 individuals stay organized, productive, and stress-free
               </p>
-              <button className="h-[65px] px-[60px] get-started-btn text-[22px] font-bold font-[family-name:var(--font-inter)] text-white mt-[35px]">
+              <button className="tablet:h-[65px] h-[53px]  tablet:px-[60px] px-10 get-started-btn tablet:text-[22px] text-[18px] font-bold font-[family-name:var(--font-inter)] text-white mt-[35px]">
                 Try it first
               </button>
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-[90px]">
+        <div className="tablet:flex hidden justify-center mt-[90px]">
           <div className="  h-[760px]  relative flex flex-col justify-center items-center font-[family-name:var(--font-inter)]">
             <Image
               className="absolute top-[30px] -left-[70px]"
@@ -623,19 +636,17 @@ export default function Home() {
             </h3>
           </div>
         </div>
-        <div className="flex items-start gap-[60px] mt-[90px]">
-          <div className="py-[50px] font-[family-name:var(--font-inter)] w-[485px]">
-            <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px]  mb-[29px] w-[485px] ">
-              Frequently asked
-              <br />
-              questions
+        <div className="flex items-start tablet:flex-row flex-col tablet:gap-[60px] gap-8 mt-[90px]">
+          <div className="py-[50px] font-[family-name:var(--font-inter)] tablet:w-[485px]">
+            <h3 className="text-[rgba(0,0,0,0.94)] tablet:text-[56px] text-[32px] font-bold tablet:leading-[56px] leading-[32px]  mb-[29px] tablet:w-[485px] ">
+              Frequently asked <br className="tablet:flex hidden" /> questions
             </h3>
             <p className="text-[17px] text-black/70 leading-[27px] mt-[29px]">
               Got questions? We &apos; ve got the answers <br />
               to help you get started smoothly.
             </p>
           </div>
-          <div className="ml-[60px] flex flex-col w-full">
+          <div className="tablet:ml-[60px] flex flex-col gap-4 w-full">
             {data.map((item, index) => (
               <Accordion
                 key={index}
@@ -649,22 +660,22 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mt-[90px] footer-bg px-[48px]">
+      <div className="mt-[90px] footer-bg tablet:px-[48px] px-4">
         <div className="pt-[48px] pb-[100px] max-w-[1440px] mx-auto">
-          <div className=" font-[family-name:var(--font-inter)] flex justify-between  items-center  w-full">
-            <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] ">
+          <div className=" font-[family-name:var(--font-inter)] flex tablet:flex-row flex-col justify-between  tablet:items-center  w-full">
+            <h3 className="text-[rgba(0,0,0,0.94)] tablet:text-[56px] text-[32px] font-bold tablet:leading-[56px] leading-8 ">
               Simple pricing
             </h3>
-            <p className="text-[17px]  text-right text-black/70 leading-[27px] ">
+            <p className="text-[17px]  tablet:text-right text-black/70 leading-[27px] tablet:pt-0 pt-6 ">
               Get everything you need to manage emails <br />
               efficiently and collaborate with your team
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-6 mt-[120px]">
+          <div className="grid tablet:grid-cols-3 gap-6 mt-[120px]">
             {pricingTiers.map((tier, index) => (
               <div
                 key={index}
-                className="w-full faq-card p-[48px] font-[family-name:var(--font-inter)]"
+                className="w-full faq-card tablet:rounded-[24px] rounded-[50px] tablet:px-[48px] px-8 tablet:py-[48px] py-7 font-[family-name:var(--font-inter)]"
               >
                 <h6>{tier.name}</h6>
                 <div className="mt-[11px] flex items-end">
@@ -696,7 +707,7 @@ export default function Home() {
           </div>
           <div className="mt-[120px]">
             <Image className="w-full " src={footerMaily} alt="footer-maily" />
-            <div className="mt-[100px] flex items-center justify-between font-[family-name:var(--font-inter)]">
+            <div className="mt-[100px] flex tablet:items-center  tablet:flex-row flex-col justify-between tablet:gap-0 gap-[56px] font-[family-name:var(--font-inter)]">
               <div className="flex flex-col gap-[18px]">
                 <h5 className="text-[40px] leading-[48px] text-white">
                   Maily.io
@@ -706,8 +717,8 @@ export default function Home() {
                   making the process seamless and efficient.
                 </p>
               </div>
-              <div className="flex gap-[95px] ">
-                <div className="flex gap-[57px]">
+              <div className="flex tablet:flex-row flex-col gap-[95px] ">
+                <div className="flex tablet:flex-row flex-col gap-[57px]">
                   <div className="flex flex-col">
                     <h5 className="text-[24px] text-white font-medium">
                       Legal

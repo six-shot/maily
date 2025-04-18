@@ -1,10 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-mobile: 375px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1024px;
+  --breakpoint-laptop-m: 1280px;
+  --breakpoint-desktop: 1440px;
+}
+
 body {
   background: white;
 }
 .hero-bg {
-  align-items: center;
   background: radial-gradient(
     62.41569446875758% 80.11014942970601% at 52.548115021246446%
       31.507288140638245%,
@@ -13,14 +21,10 @@ body {
   );
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
-  display: flex;
-  flex: none;
-  flex-direction: column;
-  flex-wrap: nowrap;
 
   overflow: hidden;
   padding-bottom: 192px;
-  position: relative;
+
   width: 100%;
 }
 
@@ -126,10 +130,10 @@ body {
 }
 .work-tab {
   background-color: rgb(255, 76, 0);
-    border-radius: 24.936% / 28.6445%;
-    box-shadow: rgb(255, 214, 0) 0px 5.24643px 16.4388px 0px inset;
-    transform: translate3d(0px, 0.0601165px, 0px);
-    transform-origin: 50% 50% 0px;
+  border-radius: 24.936% / 28.6445%;
+  box-shadow: rgb(255, 214, 0) 0px 5.24643px 16.4388px 0px inset;
+  transform: translate3d(0px, 0.0601165px, 0px);
+  transform-origin: 50% 50% 0px;
 }
 .it-team-tab {
   background-color: rgb(0, 10, 255);
@@ -173,19 +177,36 @@ body {
   }
 }
 
-
-.testimonial-card{
+.testimonial-card {
   border-radius: 40px;
-background: linear-gradient(180deg, #FFF 0%, #B5D8FF 100%);
-
+  background: linear-gradient(180deg, #fff 0%, #b5d8ff 100%);
 }
 
-
-.faq-card{
+.faq-card {
   border-radius: 24px;
-background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), rgba(255, 255, 255, 0.50);
-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.10), 0px 2px 2px 0px rgba(0, 0, 0, 0.09), 0px 4.5px 2.5px 0px rgba(0, 0, 0, 0.05);
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 100%
+    ),
+    rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.09), 0px 4.5px 2.5px 0px rgba(0, 0, 0, 0.05);
 }
-.footer-bg{
-  background: linear-gradient(180deg, rgba(13, 126, 255, 0.00) 13%, rgba(13, 126, 255, 0.15) 29.03%, #0E7EFF 55.79%, #3995FE 100%);
+.footer-bg {
+  background: linear-gradient(
+    180deg,
+    rgba(13, 126, 255, 0) 13%,
+    rgba(13, 126, 255, 0.15) 29.03%,
+    #0e7eff 55.79%,
+    #3995fe 100%
+  );
+}
+
+.menu-bg {
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  box-shadow: rgb(144, 209, 255) 0px 2px 0px 0px,
+    rgba(153, 217, 255, 0.5) 0px 5px 15px 0px inset;
+  opacity: 1;
 }
