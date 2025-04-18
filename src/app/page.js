@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import svg from "../../public/maily.svg";
 import bg2 from "../../public/bg2.png";
@@ -18,11 +19,13 @@ import cta from "../../public/cta.png";
 import book from "../../public/book.png";
 import organizee from "../../public/organise.png";
 import Marquee from "react-fast-marquee";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 export default function Home() {
   const testimonials = [
     {
       name: "Samantha Collins",
-      text: `I can’t imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      text: `I can't imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
       image: samantha,
       rating: 5,
     },
@@ -34,13 +37,13 @@ export default function Home() {
     },
     {
       name: "Aisha Khan",
-      text: `Finally, an app that does what it promises. I’m more productive and less stressed. Total win.`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 5,
     },
     {
       name: "Samantha Collins",
-      text: `I can’t imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      text: `I can't imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
       image: samantha,
       rating: 5,
     },
@@ -52,13 +55,13 @@ export default function Home() {
     },
     {
       name: "Aisha Khan",
-      text: `Finally, an app that does what it promises. I’m more productive and less stressed. Total win.`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 5,
     },
     {
       name: "Samantha Collins",
-      text: `I can’t imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      text: `I can't imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
       image: samantha,
       rating: 5,
     },
@@ -70,13 +73,13 @@ export default function Home() {
     },
     {
       name: "Aisha Khan",
-      text: `Finally, an app that does what it promises. I’m more productive and less stressed. Total win.`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 5,
     },
     {
       name: "Samantha Collins",
-      text: `I can’t imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
+      text: `I can't imagine running my day without it. The notifications are instant, and the categorization makes life much easier. A game-changer for staying organized!`,
       image: samantha,
       rating: 5,
     },
@@ -88,12 +91,29 @@ export default function Home() {
     },
     {
       name: "Aisha Khan",
-      text: `Finally, an app that does what it promises. I’m more productive and less stressed. Total win.`,
+      text: `Finally, an app that does what it promises. I'm more productive and less stressed. Total win.`,
       image: samantha,
       rating: 5,
     },
   ];
-
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const data = [
+    {
+      title: "How does this work?",
+      answer:
+        "Our platform organizes your emails using AI-powered tags, ensuring important messages are easy to find and manage instantly.",
+    },
+    {
+      title: "How does this work?",
+      answer:
+        "Our platform organizes your emails using AI-powered tags, ensuring important messages are easy to find and manage instantly.",
+    },
+    {
+      title: "How does this work?",
+      answer:
+        "Our platform organizes your emails using AI-powered tags, ensuring important messages are easy to find and manage instantly.",
+    },
+  ];
   return (
     <div>
       <div className="hero-bg h-[847px] bg relative">
@@ -479,7 +499,95 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="flex items-start gap-[60px] mt-[90px]">
+          <div className="py-[50px] px-[48px] font-[family-name:var(--font-inter)] w-[485px]">
+            <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px]  mb-[29px] w-[485px] ">
+              Frequently asked
+              <br />
+              questions
+            </h3>
+            <p className="text-[17px] text-black/70 leading-[27px] mt-[29px]">
+              Got questions? We've got the answers <br />
+              to help you get started smoothly.
+            </p>
+          </div>
+          <div className="ml-[60px] flex flex-col w-full">
+            {data.map((item, index) => (
+              <Accordion
+                key={index}
+                index={index}
+                title={item.title}
+                answer={item.answer}
+                hoveredIndex={hoveredIndex}
+                setHoveredIndex={setHoveredIndex}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
 }
+
+const Accordion = ({ title, answer, index, hoveredIndex, setHoveredIndex }) => {
+  const isOpen = hoveredIndex === index;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: false }}
+      onClick={() => setHoveredIndex(isOpen ? null : index)}
+      className="relative p-[1px] overflow-hidden rounded-[1.25rem] cursor-pointer"
+    >
+      <div className="stroke-rectangle absolute inset-0"></div>
+      {isOpen && <div className="stroke-rectangle is-gradient"></div>}
+      <div className="faq-card text-black font-[family-name:var(--font-inter)] p-8">
+        <motion.button
+          className="flex gap-6 items-center w-full text-left"
+          whileHover={{ scale: 1.01 }}
+          transition={{ duration: 0.2 }}
+        >
+          <motion.div
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+            className="relative w-[24px] h-[24px]"
+          >
+            <motion.span
+              className="absolute top-[11px] left-0 w-[24px] h-[2px] bg-[#0C7DFF]"
+              variants={{
+                open: { rotate: 45 },
+                closed: { rotate: 0 },
+              }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.span
+              className="absolute top-[11px] left-0 w-[24px] h-[2px] bg-[#0C7DFF]"
+              variants={{
+                open: { rotate: -45 },
+                closed: { rotate: 90 },
+              }}
+              transition={{ duration: 0.3 }}
+            />
+          </motion.div>
+          <span className="text-[22px] font-medium">{title}</span>
+        </motion.button>
+
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className="pt-[22px] text-[1rem]">{answer}</div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
+  );
+};

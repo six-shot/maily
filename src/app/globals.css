@@ -179,3 +179,9 @@ body {
 background: linear-gradient(180deg, #FFF 0%, #B5D8FF 100%);
 
 }
+
+.faq-card{
+  border-radius: 24px;
+background: linear-gradient(180deg, #FFF 0%, #EEE 100%);
+box-shadow: 0px 0px 68.456px 0px #FFF inset, 0px 0.575px 1.151px 0px rgba(0, 0, 0, 0.07), 0px 2.301px 2.301px 0px rgba(0, 0, 0, 0.06);
+}
