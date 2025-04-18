@@ -549,28 +549,36 @@ const Accordion = ({ title, answer, index, hoveredIndex, setHoveredIndex }) => {
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.2 }}
         >
-          <motion.div
-            initial={false}
-            animate={isOpen ? "open" : "closed"}
-            className="relative w-[24px] h-[24px]"
+          <motion.svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27"
+            height="27"
+            viewBox="0 0 27 27"
+            fill="none"
+            animate={isOpen ? { rotate: 45 } : { rotate: 0 }}
+            transition={{ duration: 0.3 }}
           >
-            <motion.span
-              className="absolute top-[11px] left-0 w-[24px] h-[2px] bg-[#0C7DFF]"
-              variants={{
-                open: { rotate: 45 },
-                closed: { rotate: 0 },
-              }}
-              transition={{ duration: 0.3 }}
-            />
-            <motion.span
-              className="absolute top-[11px] left-0 w-[24px] h-[2px] bg-[#0C7DFF]"
-              variants={{
-                open: { rotate: -45 },
-                closed: { rotate: 90 },
-              }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.div>
+            <g clipPath="url(#clip0_1_556)">
+              <path
+                d="M13.2018 25.1331C12.7266 25.1331 12.2709 24.9444 11.9349 24.6084C11.5989 24.2724 11.4102 23.8166 11.4102 23.3415V1.84147C11.4102 1.36629 11.5989 0.910575 11.9349 0.574572C12.2709 0.23857 12.7266 0.0498047 13.2018 0.0498047C13.677 0.0498047 14.1327 0.23857 14.4687 0.574572C14.8047 0.910575 14.9935 1.36629 14.9935 1.84147V23.3415C14.9935 23.8166 14.8047 24.2724 14.4687 24.6084C14.1327 24.9444 13.677 25.1331 13.2018 25.1331Z"
+                fill="#0C7DFF"
+              />
+              <path
+                d="M2.45182 14.3831C1.97664 14.3831 1.52093 14.1944 1.18492 13.8584C0.848921 13.5224 0.660156 13.0666 0.660156 12.5915C0.660156 12.1163 0.848921 11.6606 1.18492 11.3246C1.52093 10.9886 1.97664 10.7998 2.45182 10.7998H23.9518C24.427 10.7998 24.8827 10.9886 25.2187 11.3246C25.5547 11.6606 25.7435 12.1163 25.7435 12.5915C25.7435 13.0666 25.5547 13.5224 25.2187 13.8584C24.8827 14.1944 24.427 14.3831 23.9518 14.3831H2.45182Z"
+                fill="#0C7DFF"
+              />
+            </g>
+            <defs>
+              <clipPath id="clip0_1_556">
+                <rect
+                  width="26"
+                  height="26"
+                  fill="white"
+                  transform="translate(0.5 0.0498047)"
+                />
+              </clipPath>
+            </defs>
+          </motion.svg>
           <span className="text-[22px] font-medium">{title}</span>
         </motion.button>
 
