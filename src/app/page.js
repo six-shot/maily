@@ -624,7 +624,7 @@ export default function Home() {
           </div>
         </div>
         <div className="flex items-start gap-[60px] mt-[90px]">
-          <div className="py-[50px] px-[48px] font-[family-name:var(--font-inter)] w-[485px]">
+          <div className="py-[50px] font-[family-name:var(--font-inter)] w-[485px]">
             <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px]  mb-[29px] w-[485px] ">
               Frequently asked
               <br />
