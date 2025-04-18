@@ -113,6 +113,11 @@ export default function Home() {
       answer:
         "Our platform organizes your emails using AI-powered tags, ensuring important messages are easy to find and manage instantly.",
     },
+    {
+      title: "How does this work?",
+      answer:
+        "Our platform organizes your emails using AI-powered tags, ensuring important messages are easy to find and manage instantly.",
+    },
   ];
   return (
     <div>
@@ -482,7 +487,11 @@ export default function Home() {
             className="absolute bottom-0 left-0 "
             alt="organize"
           />
-          <Image className="w-full h-full rounded-[50px]" src={cta} alt="cta" />
+          <Image
+            className="w-full h-full  object-cover rounded-[50px]"
+            src={cta}
+            alt="cta"
+          />
           <div className="absolute top-0 left-0 w-full h-full z-10">
             <div className="flex flex-col justify-center items-center h-full font-[family-name:var(--font-inter)]">
               <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] text-center mb-[29px] ">
@@ -507,7 +516,7 @@ export default function Home() {
               questions
             </h3>
             <p className="text-[17px] text-black/70 leading-[27px] mt-[29px]">
-              Got questions? We've got the answers <br />
+              Got questions? We &apos; ve got the answers <br />
               to help you get started smoothly.
             </p>
           </div>
@@ -525,6 +534,37 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <div className="mt-[90px] footer-bg">
+        <div className="py-[48px] max-w-[1440px] mx-auto">
+          <div className=" font-[family-name:var(--font-inter)] flex justify-between  items-center  w-full">
+            <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] ">
+              Simple pricing
+            </h3>
+            <p className="text-[17px]  text-right text-black/70 leading-[27px] ">
+              Get everything you need to manage emails <br />
+              efficiently and collaborate with your team
+            </p>
+          </div>
+          <div className="grid grid-cols-3 gap-6 mt-[120px]">
+            <div className="w-full h-[632px] faq-card p-[48px] font-[family-name:var(--font-inter)] ">
+              <h6>Basic</h6>
+              <div className="mt-[11px] flex items-end">
+                <h5 className="text-[48px] leading-[58px]">$0</h5>
+                <p className="text-[28px] text-[rgba(0,0,0,0.45)] leading-[34px] pb-[5px]">
+                  /month
+                </p>
+              </div>
+              <p className="text-[17px] text-black opacity-[0.45] leading-[27px] mt-5 mb-[35px]">
+                All the email basics in one package.
+              </p>
+              <button className="h-[65px] px-[40px] get-started-btn text-[22px] font-medium font-[family-name:var(--font-inter)] text-white">
+                Get started today
+              </button>
+              <div className="mt-[31px] border border-[rgba(0,0,0,0.10)]" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
@@ -539,11 +579,11 @@ const Accordion = ({ title, answer, index, hoveredIndex, setHoveredIndex }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: false }}
       onClick={() => setHoveredIndex(isOpen ? null : index)}
-      className="relative p-[1px] overflow-hidden rounded-[1.25rem] cursor-pointer"
+      className="relative p-[1px] overflow-hidden cursor-pointer"
     >
       <div className="stroke-rectangle absolute inset-0"></div>
       {isOpen && <div className="stroke-rectangle is-gradient"></div>}
-      <div className="faq-card text-black font-[family-name:var(--font-inter)] p-8">
+      <div className=" faq-card text-black font-[family-name:var(--font-inter)] p-8">
         <motion.button
           className="flex gap-6 items-center w-full text-left"
           whileHover={{ scale: 1.01 }}
