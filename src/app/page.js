@@ -649,7 +649,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mt-[90px] footer-bg">
+      <div className="mt-[90px] footer-bg px-[48px]">
         <div className="pt-[48px] pb-[100px] max-w-[1440px] mx-auto">
           <div className=" font-[family-name:var(--font-inter)] flex justify-between  items-center  w-full">
             <h3 className="text-[rgba(0,0,0,0.94)] text-[56px] font-bold leading-[56px] ">
